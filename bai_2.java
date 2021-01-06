@@ -17,6 +17,7 @@ public class bai_2 {
             System.out.println("so lon nhat trong ba so la:" + b);
         }
         if (c >= a && c >= b) {
+            System.out.println("so lon nhat trong ba so la:" + c);
         }
 
     }
