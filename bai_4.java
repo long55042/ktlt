@@ -1,19 +1,18 @@
-package vn.viettuts.bai_4;
 
 import java.util.Scanner;
 public class bai_4 {
     private static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
         System.out.print("Nhập hệ số bậc 2, a = ");
-        float a = a .scanner.nextFloat();
+        float a = bai_4 .scanner.nextFloat();
         System.out.print("Nhập hệ số bậc 1, b = ");
-        float b = BaiTap1.scanner.nextFloat();
+        float b = bai_4.scanner.nextFloat();
         System.out.print("Nhập hằng số tự do, c = ");
-        float c = scanner.nextFloat();
+        float c = bai_4.scanner.nextFloat();
         BaiTap1.giaiPTBac2(a, b, c);
     }
     public static void giaiPTBac2(float a, float b, float c) {
-        // kiểm tra các hệ số
+       
         if (a == 0) {
             if (b == 0) {
                 System.out.println("Phương trình vô nghiệm!");
@@ -39,5 +38,4 @@ public class bai_4 {
             System.out.println("Phương trình vô nghiệm!");
         }
     }
-}
 }
