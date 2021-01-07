@@ -1,19 +1,19 @@
 import java.util.Scanner;
 
 public class bai_7 {
+    public static void main(String[] args){
     Scanner scanner = new Scanner(System.in);
-    int arr[] = new int[2];
+    int a,b;
 
         System.out.print("Nhap a = ");
-    arr[0] = scan.nextInt();
+    a = scan.nextInt();
         System.out.print("Nhap b = ");
-    arr[1] = scan.nextInt();
+    b = scan.nextInt();
 
-        System.out.println("Befor swap: a = " + arr[0] + " b = " + arr[1]);
-        sw.Cau7(arr, 0, 1);
-        System.out.println("After swap: a = " + arr[0] + " b = " + arr[1]);
-
-        scan.close();
-}
+        System.out.println("\n gia tri ban dau cua hai so la: " + a +" " +b);
+        int c = a;
+        a=b;
+        b=c;
+        System.out.println("\n gia tri cua hai so khi hoan vi la: " + a + " " + b);
 }
 }
