@@ -1,41 +1,28 @@
-
-import java.util.Scanner;
 public class bai_4 {
-    private static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
-        System.out.print("Nhập hệ số bậc 2, a = ");
-        float a = bai_4 .scanner.nextFloat();
-        System.out.print("Nhập hệ số bậc 1, b = ");
-        float b = bai_4.scanner.nextFloat();
-        System.out.print("Nhập hằng số tự do, c = ");
-        float c = bai_4.scanner.nextFloat();
-        BaiTap1.giaiPTBac2(a, b, c);
-    }
-    public static void giaiPTBac2(float a, float b, float c) {
-       
-        if (a == 0) {
-            if (b == 0) {
-                System.out.println("Phương trình vô nghiệm!");
-            } else {
-                System.out.println("Phương trình có một nghiệm: "
-                        + "x = " + (-c / b));
+        int count = 0;
+        System.out.println("Liệt kê tất cả số nguyên tố có 5 chữ số:");
+        for (int i = 10001; i < 99999; i+=2) {
+            if (isPrimeNumber(i)) {
+                System.out.println(i);
+                count++;
             }
-            return;
         }
-        float delta = b*b - 4*a*c;
-        float x1;
-        float x2;
-        if (delta > 0) {
-            x1 = (float) ((-b + Math.sqrt(delta)) / (2*a));
-            x2 = (float) ((-b - Math.sqrt(delta)) / (2*a));
-            System.out.println("Phương trình có 2 nghiệm là: "
-                    + "x1 = " + x1 + " và x2 = " + x2);
-        } else if (delta == 0) {
-            x1 = (-b / (2 * a));
-            System.out.println("Phương trình có nghiệm kép: "
-                    + "x1 = x2 = " + x1);
-        } else {
-            System.out.println("Phương trình vô nghiệm!");
+        System.out.println("Tổng các số nguyên tố có 5 chữ số là: " + count);
+    }
+
+    public static boolean isPrimeNumber(int n) {
+        // so nguyen n < 2 khong phai la so nguyen to
+        if (n < 2) {
+            return false;
         }
+        // check so nguyen to khi n >= 2
+        int squareRoot = (int) Math.sqrt(n);
+        for (int i = 2; i <= squareRoot; i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        return true;
     }
 }
